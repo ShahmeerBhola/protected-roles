@@ -6,3 +6,10 @@ exports.SignUpValidation = [
     .isLength({ min: 6 })
     .withMessage("Password must be at least 6 characters"),
 ];
+
+exports.LoginValidation = [
+  check("email").notEmpty().withMessage("Please provide your email"),
+  check("password")
+    .isLength({ min: 6 })
+    .withMessage("Password must be at least 6 characters"),
+];
